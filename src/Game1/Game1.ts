@@ -364,7 +364,7 @@ class Game1 extends egret.DisplayObjectContainer {
                         this.mainBox.addChild(tempBlock);
                         tempBlock.x = this.blockStartX + (j + startJ) * this.blockSpace + tempBlock.anchorOffsetX;
                         tempBlock.y = this.blockStartY + (i + startI) * this.blockSpace + tempBlock.anchorOffsetY;
-                        this.addPushEft(tempBlock);
+                        EFT.addPushEft(tempBlock);
                         addScore++;
                     }
                 }
@@ -501,7 +501,7 @@ class Game1 extends egret.DisplayObjectContainer {
 
                         this.blockData[_i][_j] = 0;
                         this.blockArray[_i][_j] = "";
-                        this.addClearEft(target);
+                        EFT.addClearEft(target);
                     }, this, [tempBlock, i, j]);
                     //
                     if (!isAdd) {
@@ -525,7 +525,7 @@ class Game1 extends egret.DisplayObjectContainer {
 
                     this.blockData[_j][rowI] = 0;
                     this.blockArray[_j][rowI] = "";
-                    this.addClearEft(target);
+                    EFT.addClearEft(target);
                 }, this, [tempBlock, i, j]);
             }
             addScore += stepScore;
@@ -533,79 +533,6 @@ class Game1 extends egret.DisplayObjectContainer {
         }
         Game1.currentScore += addScore;
         egret.Tween.get(this).to({ score: Game1.currentScore }, 500);
-    }
-
-    /**
-     * 消除效果
-     * @param _block 小块对象
-     */
-    private addClearEft(_block) {
-        var tempStar: egret.Bitmap;
-        for (var i = 0; i < 10; i++) {
-            tempStar = DictBitmap.produce("star" + _block["colorId"] + "_" + Tool.getRandom(1, 3, 0) + "_png");
-            this.mainBox.addChild(tempStar);
-            tempStar.blendMode = egret.BlendMode.ADD;
-            Tool.anchorXY(tempStar);
-            tempStar.x = _block.x + Tool.getRandom(-10, 10);
-            tempStar.y = _block.y + Tool.getRandom(-10, 10);
-            tempStar.scaleX = tempStar.scaleY = 0;
-            var wt = Tool.getRandom(0, 200);
-            var speedTime = 400 + Tool.getRandom(0, 1000);
-            if (Math.random() < 0.7) {
-                egret.Tween.get(tempStar).wait(wt)
-                    .to({ x: tempStar.x + Tool.getRandom(-100, 100), y: tempStar.y + Tool.getRandom(-100, 100) }, speedTime, egret.Ease.quadOut)
-            } else {
-                egret.Tween.get(tempStar).wait(wt)
-                    .to({ x: tempStar.x + Tool.getRandom(-300, 300), y: tempStar.y + Tool.getRandom(-300, 300) }, speedTime, egret.Ease.quadOut)
-            }
-
-            egret.Tween.get(tempStar)
-                .wait(wt)
-                .to({ scaleX: 1, scaleY: 1 }, speedTime * 0.2)
-                .to({ scaleX: 0, scaleY: 0 }, speedTime * 0.7, egret.Ease.quadOut)
-                .call((target: egret.Bitmap) => {
-                    DictBitmap.reclaim(target);
-                }, this, [tempStar]);
-        }
-    }
-
-    /**
-     * 摆放效果
-     */
-    private addPushEft(_block) {
-        _block
-        var tempStar: egret.Bitmap;
-        var lineNum = 6;
-        for (var i = 0; i < 4; i++) {
-            for (var j = 0; j < lineNum; j++) {
-                tempStar = DictBitmap.produce("star" + _block["colorId"] + "_" + Tool.getRandom(1, 3, 0) + "_png");
-                this.mainBox.addChild(tempStar);
-                tempStar.blendMode = egret.BlendMode.ADD;
-                Tool.anchorXY(tempStar);
-                if (i == 0) {
-                    //top
-                    tempStar.x = _block.x - _block.anchorOffsetX + j * _block.width / lineNum;
-                    tempStar.y = _block.y - _block.anchorOffsetY;
-                } else if (i == 1) {
-                    //left
-                    tempStar.x = _block.x + _block.anchorOffsetX;
-                    tempStar.y = _block.y - _block.anchorOffsetY + j * _block.height / lineNum;
-                } else if (i == 2) {
-                    //bottom
-                    tempStar.x = _block.x - _block.anchorOffsetX + j * _block.height / lineNum;
-                    tempStar.y = _block.y + _block.anchorOffsetY;
-                } else if (i == 3) {
-                    //right
-                    tempStar.x = _block.x - _block.anchorOffsetX;
-                    tempStar.y = _block.y - _block.anchorOffsetX + j * _block.height / lineNum;
-                }
-                tempStar.scaleX = tempStar.scaleY = Tool.getRandom(0.2, 0.5);
-                egret.Tween.get(tempStar).to({ x: tempStar.x + Tool.getRandom(-20, 20), y: tempStar.y + Tool.getRandom(-20, 20), scaleX: 0, scaleY: 0 }, 300 + Tool.getRandom(0, 500), egret.Ease.quadOut)
-                    .call((target: egret.Bitmap) => {
-                        DictBitmap.reclaim(target);
-                    }, this, [tempStar]);
-            }
-        }
     }
 
     private set score(v) {
@@ -805,7 +732,7 @@ class Game1 extends egret.DisplayObjectContainer {
             tempBlock.y = this.blockStartY + i * this.blockSpace + tempBlock.anchorOffsetY;
             this.blockArray[i][j] = tempBlock;
             this.blockData[i][j] = 1;
-            this.addPushEft(tempBlock);
+            EFT.addPushEft(tempBlock);
 
             Game1.currentScore += 1;
             egret.Tween.get(this).to({ score: Game1.currentScore }, 300);
@@ -813,8 +740,7 @@ class Game1 extends egret.DisplayObjectContainer {
             this.checkBlockData();
         }
     }
-
-
+    
     /**
      * 使用锤子道具
      */
@@ -840,7 +766,7 @@ class Game1 extends egret.DisplayObjectContainer {
             this.blockData[i][j] = 0;
             var tempBlock: egret.Bitmap = this.blockArray[i][j];
             this.blockArray[i][j] = undefined;
-            this.addClearEft(tempBlock);
+            EFT.addClearEft(tempBlock);
             DictBitmap.reclaim(tempBlock);
         }
     }

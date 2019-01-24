@@ -733,7 +733,7 @@ class Game1 extends egret.DisplayObjectContainer {
             this.blockArray[i][j] = tempBlock;
             this.blockData[i][j] = 1;
             EFT.addPushEft(tempBlock);
-
+            
             Game1.currentScore += 1;
             egret.Tween.get(this).to({ score: Game1.currentScore }, 300);
 

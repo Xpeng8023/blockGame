@@ -6,22 +6,22 @@ class Main extends egret.DisplayObjectContainer {
     private onAddToStage(event: egret.Event) {
         Main.stageW = this.stage.stageWidth;
         Main.stageH = this.stage.stageHeight;
-        egret.lifecycle.addLifecycleListener((context) => {
-            context.onUpdate = () => {
-            }
-        })
+        // egret.lifecycle.addLifecycleListener((context) => {
+        //     context.onUpdate = () => {
+        //     }
+        // })
 
-        egret.lifecycle.onPause = () => {
-            egret.ticker.pause();
-        }
+        // egret.lifecycle.onPause = () => {
+        //     egret.ticker.pause();
+        // }
         
-        egret.lifecycle.onResume = () => {
-            egret.ticker.resume();
-        }
+        // egret.lifecycle.onResume = () => {
+        //     egret.ticker.resume();
+        // }
 
-        this.runGame().catch(e => {
-            console.log(e);
-        })
+        // this.runGame().catch(e => {
+        //     console.log(e);
+        // })
     }
 
     private async runGame() {

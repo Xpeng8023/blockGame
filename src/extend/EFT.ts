@@ -1,5 +1,6 @@
 /**
  * 效果类
+ * @author xpj
  */
 class EFT extends egret.DisplayObjectContainer {
     /**

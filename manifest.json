@@ -1,0 +1,28 @@
+{
+	"initial": [
+		"libs/modules/egret/egret.js",
+		"libs/modules/egret/egret.web.js",
+		"libs/modules/game/game.js",
+		"libs/modules/tween/tween.js",
+		"libs/modules/assetsmanager/assetsmanager.js",
+		"libs/modules/promise/promise.js"
+	],
+	"game": [
+		"bin-debug/core/net/PostExp.js",
+		"bin-debug/Home.js",
+		"bin-debug/Main.js",
+		"bin-debug/Pause.js",
+		"bin-debug/Platform.js",
+		"bin-debug/core/EM.js",
+		"bin-debug/core/Events.js",
+		"bin-debug/core/net/GetExp.js",
+		"bin-debug/LoadingUI.js",
+		"bin-debug/elements/Meteor.js",
+		"bin-debug/extend/DictBitmap.js",
+		"bin-debug/extend/DictSprite.js",
+		"bin-debug/extend/EFT.js",
+		"bin-debug/extend/Tool.js",
+		"bin-debug/Game1/Game1.js",
+		"bin-debug/Game1/GameOver1.js"
+	]
+}

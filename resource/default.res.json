@@ -1,0 +1,235 @@
+{
+	"groups": [
+		{
+			"name": "preload",
+			"keys": "bg_jpg,common_block_1_png,common_block_2_png,common_block_3_png,common_block_4_png,common_block_5_png,common_block_6_png,common_block_7_png,public_msg_bg_png,public_msg_btn_bg_png,music_icon1_png,music_icon2_png,public_wait_icon_png,border_png,btn_replay_png,gameover_txt_png,icon_png,meteor_png,home_btn1_png,home_btn2_png,home_btn3_png,btn_home_png,btn_play_png,btn_pause_png,score_num_fnt,score_num_png,btn_reflush_png,btn_back_png,btn_hammer_png,cover_png,btn_add_png,star1_1_png,star1_2_png,star2_1_png,star2_2_png,star3_1_png,star3_2_png,star4_1_png,star4_2_png,star5_1_png,star5_2_png,star6_1_png,star6_2_png,star7_1_png,star7_2_png"
+		}
+	],
+	"resources": [
+		{
+			"name": "bg_jpg",
+			"type": "image",
+			"url": "assets/bg.jpg"
+		},
+		{
+			"name": "common_block_1_png",
+			"type": "image",
+			"url": "assets/block/common_block_1.png"
+		},
+		{
+			"name": "common_block_2_png",
+			"type": "image",
+			"url": "assets/block/common_block_2.png"
+		},
+		{
+			"name": "common_block_3_png",
+			"type": "image",
+			"url": "assets/block/common_block_3.png"
+		},
+		{
+			"name": "common_block_4_png",
+			"type": "image",
+			"url": "assets/block/common_block_4.png"
+		},
+		{
+			"name": "common_block_5_png",
+			"type": "image",
+			"url": "assets/block/common_block_5.png"
+		},
+		{
+			"name": "common_block_6_png",
+			"type": "image",
+			"url": "assets/block/common_block_6.png"
+		},
+		{
+			"name": "common_block_7_png",
+			"type": "image",
+			"url": "assets/block/common_block_7.png"
+		},
+		{
+			"name": "public_msg_bg_png",
+			"type": "image",
+			"url": "assets/public/msg/public_msg_bg.png"
+		},
+		{
+			"name": "public_msg_btn_bg_png",
+			"type": "image",
+			"url": "assets/public/msg/public_msg_btn_bg.png"
+		},
+		{
+			"name": "music_icon1_png",
+			"type": "image",
+			"url": "assets/public/music/music_icon1.png"
+		},
+		{
+			"name": "music_icon2_png",
+			"type": "image",
+			"url": "assets/public/music/music_icon2.png"
+		},
+		{
+			"name": "public_wait_icon_png",
+			"type": "image",
+			"url": "assets/public/wait/public_wait_icon.png"
+		},
+		{
+			"name": "border_png",
+			"type": "image",
+			"url": "assets/border.png"
+		},
+		{
+			"name": "btn_replay_png",
+			"type": "image",
+			"url": "assets/btn_replay.png"
+		},
+		{
+			"name": "gameover_txt_png",
+			"type": "image",
+			"url": "assets/gameover_txt.png"
+		},
+		{
+			"name": "icon_png",
+			"type": "image",
+			"url": "assets/icon.png"
+		},
+		{
+			"name": "meteor_png",
+			"type": "image",
+			"url": "assets/meteor.png"
+		},
+		{
+			"name": "home_btn1_png",
+			"type": "image",
+			"url": "assets/home_btn1.png"
+		},
+		{
+			"name": "home_btn2_png",
+			"type": "image",
+			"url": "assets/home_btn2.png"
+		},
+		{
+			"name": "home_btn3_png",
+			"type": "image",
+			"url": "assets/home_btn3.png"
+		},
+		{
+			"name": "btn_home_png",
+			"type": "image",
+			"url": "assets/btn_home.png"
+		},
+		{
+			"name": "btn_play_png",
+			"type": "image",
+			"url": "assets/btn_play.png"
+		},
+		{
+			"name": "btn_pause_png",
+			"type": "image",
+			"url": "assets/btn_pause.png"
+		},
+		{
+			"name": "score_num_fnt",
+			"type": "font",
+			"url": "assets/score_num.fnt"
+		},
+		{
+			"name": "score_num_png",
+			"type": "image",
+			"url": "assets/score_num.png"
+		},
+		{
+			"name": "btn_reflush_png",
+			"type": "image",
+			"url": "assets/btn_reflush.png"
+		},
+		{
+			"name": "btn_back_png",
+			"type": "image",
+			"url": "assets/btn_back.png"
+		},
+		{
+			"name": "btn_hammer_png",
+			"type": "image",
+			"url": "assets/btn_hammer.png"
+		},
+		{
+			"name": "cover_png",
+			"type": "image",
+			"url": "assets/cover.png"
+		},
+		{
+			"name": "btn_add_png",
+			"type": "image",
+			"url": "assets/btn_add.png"
+		},
+		{
+			"name": "star1_1_png",
+			"type": "image",
+			"url": "assets/block/star1_1.png"
+		},
+		{
+			"name": "star1_2_png",
+			"type": "image",
+			"url": "assets/block/star1_2.png"
+		},
+		{
+			"name": "star2_1_png",
+			"type": "image",
+			"url": "assets/block/star2_1.png"
+		},
+		{
+			"name": "star2_2_png",
+			"type": "image",
+			"url": "assets/block/star2_2.png"
+		},
+		{
+			"name": "star3_1_png",
+			"type": "image",
+			"url": "assets/block/star3_1.png"
+		},
+		{
+			"name": "star3_2_png",
+			"type": "image",
+			"url": "assets/block/star3_2.png"
+		},
+		{
+			"name": "star4_1_png",
+			"type": "image",
+			"url": "assets/block/star4_1.png"
+		},
+		{
+			"name": "star4_2_png",
+			"type": "image",
+			"url": "assets/block/star4_2.png"
+		},
+		{
+			"name": "star5_1_png",
+			"type": "image",
+			"url": "assets/block/star5_1.png"
+		},
+		{
+			"name": "star5_2_png",
+			"type": "image",
+			"url": "assets/block/star5_2.png"
+		},
+		{
+			"name": "star6_1_png",
+			"type": "image",
+			"url": "assets/block/star6_1.png"
+		},
+		{
+			"name": "star6_2_png",
+			"type": "image",
+			"url": "assets/block/star6_2.png"
+		},
+		{
+			"name": "star7_1_png",
+			"type": "image",
+			"url": "assets/block/star7_1.png"
+		},
+		{
+			"name": "star7_2_png",
+			"type": "image",
+			"url": "assets/block/star7_2.png"
+		}
+	]
+}
